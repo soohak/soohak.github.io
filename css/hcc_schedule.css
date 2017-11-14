@@ -1,0 +1,111 @@
+/*
+   New Perspectives on HTML and CSS, 7th Edition
+   Tutorial 6
+   Case Problem 4
+
+   Schedule Table Style Sheet
+   Author: 
+   Date:   
+
+   Filename:         hcc_schedule.css
+   Supporting Files: 
+
+*/
+
+/* Table Styles */
+table.reservation {
+	border-collapse: collapse;
+	border: 3px outset rgb(26, 63, 155);
+	font-size: 0.75em;
+	width: 90%;
+}
+
+table.capacity {
+	background:rgb(196, 213, 250);    
+	border-collapse: collapse;
+	border: 3px outset rgb(26, 63, 155);	
+	font-size: 0.75em;
+	width: 90%;	
+}
+
+/* Table Cell Styles */
+table.reservation th{
+	color:white;
+	border: 1px solid gray;
+	padding: 5px;
+    vertical-align: top;
+	width: 60px;
+}
+
+table.reservation td {
+	color:darkred;
+	border: 1px solid gray;
+	padding: 5px;
+    vertical-align: top;
+}
+table.capacity th {
+	background: rgb(59, 83, 139);
+	color: white;
+	border: 1px solid gray;
+	padding: 5px;
+    vertical-align: top;
+    width: 60px;
+}
+ 
+table.capacity td {
+	border: 1px solid gray;
+	padding: 5px;
+    vertical-align: top;
+    width: 60px;
+    vertical-align: middle;
+	text-align: center;    
+}
+
+/* Table Caption Styles */
+table.reservation caption {
+	background-color: rgb(212, 220, 250);	
+    font-size: 1.5em;
+    color:rgb(57, 57, 216) ;
+    text-align: left;    
+    padding-bottom: 5px;
+}
+
+table.capacity caption {
+	background-color: rgb(212, 220, 250);		
+    font-size: 1.5em;
+    color:rgb(57, 57, 216) ;
+    text-align: left;        
+    padding-bottom: 5px;
+}
+
+/* row groups */
+table.reservation thead {
+	background: rgb(59, 83, 139);
+	color:white;
+    font-size: 1em;    
+	height: 30px;
+}
+
+table.reservation tfoot {
+	background: rgb(59, 83, 139);
+	color: yellow; 
+    font-size: 0.8em;        
+    height: 40px;    
+}
+
+table.reservation tbody {
+    font-size: 0.9em;    
+    text-align: center;    
+    height: 30px;
+}
+
+/* column groups */
+col#timecol {
+	background:rgb(100, 170, 211);
+}
+
+col.roomcol {
+	background:rgb(150, 180, 150);
+	width: 70px;
+}
+		

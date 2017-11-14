@@ -1,0 +1,113 @@
+/*
+   New Perspectives on HTML and CSS, 7th Edition
+   Tutorial 6
+   Case Problem 4
+
+   Hamilton Conference Center Style Sheet
+   Author: 
+   Date:  
+
+   Filename:         hcc_styles.css
+   Supporting files: 
+
+*/
+
+@charset "utf-8";
+
+@font-face{
+	font-family:Quicksand;
+	src: url('Quicksand-Regular.woff') format('woff');
+}
+
+/* Pabe Layout */
+body {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1020px;
+	min-width: 640px;
+}
+
+body > header > img {
+	width: 100%;
+	display: block;
+}
+
+body > header > img {
+	width: 100%;
+	display: block;
+}
+body > nav {
+	float: left;
+	width: 20%;
+	height: 780px;
+}
+
+img#hotel{
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+}
+
+body > table.reservation {
+	width: 79%;
+	float: right;
+	min-width: 640px;
+	margin-top: 10px;		
+}
+
+body > table.capacity {
+	width: 79%;
+	float: right;
+	min-width: 640px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+body > footer {
+	width: 100%;
+    float: left;
+    text-align: center;    
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* HTML and Body Styles */
+body{
+	background-color: rgb(203, 211, 205);
+	color:rgb(91, 91, 91);
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+body > nav {
+    background-color:rgb(185, 117, 61);    
+	color:white;
+	margin-top: 30px;
+}
+
+nav > h1{
+	font-size: 1em;
+	text-align: center;
+}
+
+body > nav > ul {
+	list-style-type: none;
+}
+
+body > nav > ul > li {
+	font-size: 1em;
+}
+
+body > nav > ul > li > a:link, nav > ul > li > a:visited{
+	color: rgb(151, 151, 151);
+	text-decoration: none;
+}
+
+body > nav > ul > li > a:hover, nav > ul > li > a:active{
+	color: rgb(200, 200, 200);
+	text-decoration: underline;
+}
+
+body > footer {
+    background-color:rgb(100, 100, 100);    
+	color:white;   
+}

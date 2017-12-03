@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+/*
+ Final Project: NSCC WEBD1000, 2017-Fall
+ Author: Soohak KIM
+ Date: 2017-12-8
+ Filename: main_style.css
+*/
+
+
+/* HTML and Body Styles */
+
+html {
+    background: white;
+    height: 100%;
+    width: 100%;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 15px;
+    color: rgb(75, 116, 56);
+}
+
+body {
+    background: rgb(134, 176, 232);
+    box-shadow: rgb(51, 51, 51) 5px 0px 15px,
+    rgb(51, 51, 51) -5px 0px 15px;
+    margin: 0px auto;
+    min-height: 100%;
+    min-width: 200px;
+    max-width: 1024px;
+    width: 100%;
+}
+
+img.body_img {
+    display: block;
+    width: 90%;
+    padding-left: 40px;
+}
+
+/* Body Header Styles */
+
+img#center_img {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+
+/* nav_link Navigation Styles */
+
+nav.nav_link {
+    background-color: rgb(235, 124, 33);
+    clear: both;
+}
+
+nav.nav_link li {
+    color: rgb(31, 73, 125);
+    font-size: 1.2em;
+    line-height: 2em;
+    text-transform: uppercase;
+}
+
+nav.nav_link ul li a {
+    display: block;
+    padding-left: 10px;
+}
+
+nav.nav_link ul li a:visited, nav.nav_link ul li a:link {
+    color: rgb(231, 231, 231);
+}
+
+nav.nav_link ul li a:hover, nav.nav_link ul li a:active {
+    background-color: rgb(31, 73, 125);
+    color: rgb(231, 231, 231);
+}
+
+aside ol li a:visited, aside ol li a:link {
+    color: rgb(231, 231, 231);
+}
+aside ol li a:hover, aside ol li a:active {
+    color: rgb(231, 231, 231);
+}
+
+/* Aside Styles */
+
+body aside {
+    background-color: rgb(231, 230, 233);
+}
+
+body aside h1 {
+    background-color: rgb(53, 46, 41);
+    color: ivory;
+    font-size: 1.3em;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+body aside ol {
+    margin: 10px;
+}
+
+body aside ol > li {
+    background-color: rgb(200, 200, 100);
+    color: darkblue;
+    font-weight: bold;
+    line-height: 2em;
+    margin-top: 10px;
+}
+
+body aside li {
+    color: darkred;
+    line-height: 1.8em;
+    margin-top: 10px;
+}
+/* Section Styles */
+
+body aside ul#SN{
+    background-color: orange;
+    color: darkblue;
+    line-height: 1.5em;
+    margin-top: 5px;
+}
+
+section#main {
+    background: rgb(231, 231, 231);
+}
+
+
+/* Article Styles */
+
+article#introduce {
+    padding: 10px;
+}
+
+article#introduce h1 {
+    color: rgb(230, 111, 15);
+    font-size: 2em;
+    letter-spacing: 0.2em;
+    line-height: 1em;
+    margin: 10px 0px 20px 0px;
+    padding-left: 12px;
+}
+
+article#introduce p {
+    margin: 12px;
+}
+
+
+section#short_path article {
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+}
+
+section#short_path > h1 {
+    color: rgb(230, 111, 15);
+    font-size: 2em;
+    letter-spacing: 0.2em;
+    line-height: 1em;
+    width: 100%;
+    padding-left: 12px;
+}
+
+section#short_path article:nth-of-type(even){
+    background-color: rgb(241, 237, 167);
+    color:rgb(230, 111, 15);
+}
+
+section#short_path article:nth-of-type(odd) {
+    background-color: rgb(117, 172, 138);
+    color:rgb(238, 215, 111);
+}
+
+section#short_path article h1 {
+    font-size: 1.2em;
+    margin: 5px;
+    text-align: center;
+}
+
+section#short_path article p {
+    margin: 8px;
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: rgb(72, 88, 140);
+    color: white;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+
+
+/* Base Flex Styles */
+body {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+header, footer {
+    width: 100%;
+}
+
+aside {
+    -webkit-flex: 1 1 120px; /* for old version webkit */
+    flex:1 1 120px;         /* standard */
+}
+
+section#main {
+    -webkit-flex: 3 1 361px;
+    flex:3 1 361px;
+}
+
+section#slang{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+section#slang article {
+    -webkit-flex: 1 1 200px;
+    flex-flow: 1 1 200px;
+}
+
+a#navicon {
+    display: none;
+}
+
+
+/* Mobile Styles: 0 to 480px */
+
+@media only screen and (max-width: 480px) {
+    aside {
+        -webkit-order: 4;
+        order: 4;
+    }
+
+    footer {
+        -webkit-order: 5;
+        order: 5;
+    }
+
+    a#navicon {
+        display: block;
+    }
+
+    nav.nav_link ul{
+        display: none;
+    }
+
+    a#navicon:hover+ul, nav.nav_link ul:hover {
+        display: block;
+    }
+
+    section#short_path article {
+        -webkit-flex: 1 1 300px;
+        flex-flow: 1 1 300px;
+    }
+}
+
+/* Tablet and Desktop Styles: 481px and greater */
+
+@media only screen and (min-width: 481px) {
+
+    nav.nav_link ul {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    }
+
+    nav.nav_link li {
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+
+}

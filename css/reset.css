@@ -9,6 +9,7 @@
 
 
 /* Basic styles  */
+
 article, aside, figcaption, figure,
 footer, header, main, nav, section {
     display: block;
@@ -31,6 +32,7 @@ li, main, nav, nav a, ol, p, section, span, ul {
 
 
 /* Set the default page element styles */
+
 body {
     line-height: 1.5em;
 }
@@ -47,3 +49,4 @@ nav ul {
 nav a {
     text-decoration: none;
 }
+

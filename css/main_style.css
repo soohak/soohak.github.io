@@ -4,19 +4,19 @@
  Final Project: NSCC WEBD1000, 2017-Fall
  Author: Soohak KIM
  Date: 2017-12-8
- Filename: main_style.css
+ Filename: main_style.css (main page style)
 */
 
 
 /* HTML and Body Styles */
 
 html {
-    background: white;
+    background: white center / cover no-repeat fixed;;
     height: 100%;
     width: 100%;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 15px;
-    color: rgb(75, 116, 56);
+    color: rgb(167, 21, 30);
 }
 
 body {
@@ -48,7 +48,7 @@ img#center_img {
 /* nav_link Navigation Styles */
 
 nav.nav_link {
-    background-color: rgb(235, 124, 33);
+    background-color: rgb(72, 88, 140);
     clear: both;
 }
 
@@ -69,21 +69,22 @@ nav.nav_link ul li a:visited, nav.nav_link ul li a:link {
 }
 
 nav.nav_link ul li a:hover, nav.nav_link ul li a:active {
-    background-color: rgb(31, 73, 125);
+    background-color: rgb(125, 15, 19);
     color: rgb(231, 231, 231);
 }
 
 aside ol li a:visited, aside ol li a:link {
-    color: rgb(231, 231, 231);
+    color: darkred;
 }
 aside ol li a:hover, aside ol li a:active {
+    background-color: rgb(31, 73, 125);
     color: rgb(231, 231, 231);
 }
 
 /* Aside Styles */
 
 body aside {
-    background-color: rgb(231, 230, 233);
+    background: rgb(242, 177, 119);
 }
 
 body aside h1 {
@@ -109,7 +110,6 @@ body aside ol > li {
 }
 
 body aside li {
-    color: darkred;
     line-height: 1.8em;
     margin-top: 10px;
 }
@@ -118,7 +118,7 @@ body aside li {
 body aside ul#SN{
     background-color: orange;
     color: darkblue;
-    line-height: 1.5em;
+    line-height: 1.3em;
     margin-top: 5px;
 }
 
@@ -135,7 +135,7 @@ article#introduce {
 
 article#introduce h1 {
     color: rgb(230, 111, 15);
-    font-size: 2em;
+    font-size: 1.9em;
     letter-spacing: 0.2em;
     line-height: 1em;
     margin: 10px 0px 20px 0px;
@@ -224,8 +224,8 @@ section#slang{
 }
 
 section#slang article {
-    -webkit-flex: 1 1 200px;
-    flex-flow: 1 1 200px;
+    -webkit-flex: 1 1 100px;
+    flex-flow: 1 1 100px;
 }
 
 a#navicon {
@@ -238,7 +238,6 @@ a#navicon {
 @media only screen and (max-width: 480px) {
     aside {
         -webkit-order: 4;
-        order: 4;
     }
 
     footer {

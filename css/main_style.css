@@ -36,6 +36,15 @@ img.body_img {
     padding-left: 40px;
 }
 
+img.ShortMenu {
+    display: block;
+    width: 100%;
+    height: 70%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+}
+
 /* Body Header Styles */
 
 img#center_img {
@@ -74,17 +83,17 @@ nav.nav_link ul li a:hover, nav.nav_link ul li a:active {
 }
 
 aside ol li a:visited, aside ol li a:link {
-    color: darkred;
+    color: rgb(125, 15, 19);
 }
 aside ol li a:hover, aside ol li a:active {
-    background-color: rgb(31, 73, 125);
+    background-color: rgb(69, 180, 208);
     color: rgb(231, 231, 231);
 }
 
 /* Aside Styles */
 
 body aside {
-    background: rgb(242, 177, 119);
+    background: rgb(162, 179, 215);
 }
 
 body aside h1 {
@@ -102,8 +111,7 @@ body aside ol {
 }
 
 body aside ol > li {
-    background-color: rgb(200, 200, 100);
-    color: darkblue;
+    background-color: rgb(91, 111, 134);
     font-weight: bold;
     line-height: 2em;
     margin-top: 10px;
@@ -129,6 +137,7 @@ section#main {
 
 /* Article Styles */
 
+
 article#introduce {
     padding: 10px;
 }
@@ -148,7 +157,7 @@ article#introduce p {
 
 
 section#short_path article {
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 10px;
     text-align: center;
 }
@@ -163,17 +172,18 @@ section#short_path > h1 {
 }
 
 section#short_path article:nth-of-type(even){
-    background-color: rgb(241, 237, 167);
-    color:rgb(230, 111, 15);
+    background-color: rgb(87, 101, 153);
+    color: rgb(238, 238, 238);
 }
 
 section#short_path article:nth-of-type(odd) {
-    background-color: rgb(117, 172, 138);
+    background-color: rgb(147, 131, 167);
     color:rgb(238, 215, 111);
 }
 
 section#short_path article h1 {
     font-size: 1.2em;
+    font-weight: bold;
     margin: 5px;
     text-align: center;
 }
@@ -185,7 +195,7 @@ section#short_path article p {
 /* Footer Styles */
 
 footer {
-    background-color: rgb(72, 88, 140);
+    background-color: rgb(57, 66, 114);
     color: white;
     font-size: 0.9em;
     text-align: center;
@@ -213,19 +223,19 @@ aside {
 
 section#main {
     -webkit-flex: 3 1 361px;
-    flex:3 1 361px;
+    flex:3 1 200px;
 }
 
-section#slang{
+section#short_path{
     display: -webkit-flex;
     display: flex;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap;
 }
 
-section#slang article {
-    -webkit-flex: 1 1 100px;
-    flex-flow: 1 1 100px;
+section#short_path article {
+    -webkit-flex: 1 1 220px;
+    flex-flow: 1 1 220px;
 }
 
 a#navicon {
@@ -258,8 +268,8 @@ a#navicon {
     }
 
     section#short_path article {
-        -webkit-flex: 1 1 300px;
-        flex-flow: 1 1 300px;
+        -webkit-flex: 1 1 150px;
+        flex-flow: 1 1 150px;
     }
 }
 

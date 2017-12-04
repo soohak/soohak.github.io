@@ -11,12 +11,14 @@
 body {
     background: white;
     font-family: Verdana, Geneva, sans-serif;
+    font-size: 15px;
 }
 img#sub1_center {
     display: block;
     float: left;
     width: 100%;
 }
+
 a {
     text-decoration: none;
 }
@@ -25,17 +27,26 @@ nav a:link, a:visited {
 }
 h1 {
     font-size: 1.8em;
+    color: rgb(167, 21, 30);
 }
 h2 {
-    font-size: 1.3em;
+    font-size: 1.5em;
+    color: rgb(54, 66, 119);
+}
+
+h3 {
+    font-size: 1.2em;
+    color: rgb(54, 66, 119);
 }
 p {
     font-size: 1.3em;
     line-height: 2.5;
+    color: rgb(87, 101, 153);
 }
 li {
-    font-size: 1em;
+    font-size: 1.2em;
     line-height: 2;
+    color: rgb(87, 101, 153);
 }
 
 /* Mobile Styles: 0 to 480px */
@@ -71,7 +82,7 @@ section {
 }
 
 #container section:nth-child(odd) {
-    background: gainsboro;
+    background: rgb(219, 212, 209);
 }
 .page-title {
     position: absolute;
@@ -94,9 +105,6 @@ section {
     margin-top: 20px;
 }
 
-.photo {
-    display: none;
-}
 footer {
     position: relative;
     width: 100%;
@@ -119,50 +127,77 @@ footer p {
         width: 995px;
         margin: 0 auto;
         border: 1px solid grey;
+        background: rgb(248, 244, 251);
     }
     header {
         height: 500px;
     }
-    #intro, #portfolio, #project {
+    #resume {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         clear: both;
         position: relative;
         width: 100%;
-        height: 420px;
+        height: 650px;
         padding: 15px 2% 10px 5%;
     }
+
+    #education{
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        clear: both;
+        position: relative;
+        width: 100%;
+        height: 650px;
+        padding: 15px 2% 10px 5%;
+    }
+
+    #current_skils {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        clear: both;
+        position: relative;
+        width: 100%;
+        height: 600px;
+        padding: 15px 2% 10px 5%;
+    }
+
     .content {
         margin: 80px auto 10px;
-        width: 90%;
+        width: 100%;
         padding: 20px;
     }
-    .photo {
-        width: 42%;
-        display: block;
-    }
-    .photo > img {
+    #text_skill {
+        float: left;
         width: 100%;
-        max-width: 320px;
-        height: auto;
-        margin-bottom: 30px;
+        margin-bottom: 5%;
     }
-    .text {
-        width: 42%;
+    #text_resume {
+        float: left;
+        width: 100%;
+        margin-bottom: 5%;
     }
-    #intro .photo, #portfolio .photo {
+    #text_edu{
+        float: left;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    #resume .photo, #education .photo {
         float: left;
         margin-right: 5%;
+        margin-left: 5%;
     }
-    #intro .text, #portfolio .text {
+    #resume text, #education .text {
         float: left;
     }
-    #project .photo {
+    #current_skils .photo {
         float: right;
         margin-right: 5%;
     }
-    #project .text {
+    #current_skils .text {
         float: left;
     }
     footer {

@@ -28,9 +28,10 @@ nav a:link, a:visited {
     color: white;
 }
 
-div a:link, a:visited {
+a#project1:link, a#project1:visited {
     color: rgb(167, 21, 30);
 }
+
 
 li {
     font-size: 1.2em;
@@ -139,6 +140,10 @@ footer p {
     text-align: center;
 }
 
+img#country {
+    display: none;
+}
+
 /* Tablet and Desktop Styles: 481px and greater */
 
 @media only screen and (min-width: 481px)
@@ -148,6 +153,13 @@ footer p {
         margin: 0 auto;
         border: 1px solid grey;
         background: rgb(248, 244, 251);
+    }
+
+    img#country {
+        display: block;
+        float: left;
+        width: 70%;
+        margin-top: 10px;
     }
 
     header {

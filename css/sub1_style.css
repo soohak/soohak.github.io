@@ -24,7 +24,7 @@ a {
     text-decoration: none;
 }
 
-nav a:link, a:visited {
+a.nav_list:link, a.nav_list:visited {
     color: white;
 }
 

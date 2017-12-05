@@ -83,6 +83,12 @@ function ChangeFlag(country)
 // Function: Display country information in each element
 function DisplayCountryData()
 {
+    area = 0.0;
+    population = 0;
+    world_population = 0.0;
+    rate_per_worl = 0.0;
+    Population_Density = 0.0;
+
     //Get index number from selected country name
     // This index number is same the oder number of array
     var first_select = document.getElementById("country_select");
@@ -90,7 +96,7 @@ function DisplayCountryData()
 
     // Sum of the population all countries
     for (var i = 0; i < array.length; i++) {
-        world_population = world_population + parseInt(array[i].Population);
+        world_population += parseInt(array[i].Population);
     }
 
     //Input value to variables from 'array = JSON.parse(this.responseText);'
@@ -100,7 +106,7 @@ function DisplayCountryData()
     var numeric = Display_num(population); // change number with "," per three digit
 
     Population_Density = population/area; // Calculate Population Density
-    rate_per_worl = population/world_population; // Calculate Percentage of World Population:
+    rate_per_worl = (population/world_population)*100; // Calculate Percentage of World Population:
 
     //document.getElementById('pop_country').value = population;
     document.getElementById('pop_country').value = numeric;

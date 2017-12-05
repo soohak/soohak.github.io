@@ -14,7 +14,7 @@ body {
     font-size: 15px;
 }
 
-img#sub1_center {
+img#sub2_center {
     display: block;
     float: left;
     width: 100%;
@@ -81,6 +81,7 @@ nav {
     font-size: 0.8em;
     margin: 5px 15px;
 }
+
 section {
     position: relative;
     width: 100%;

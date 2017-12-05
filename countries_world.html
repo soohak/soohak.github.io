@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+<!--
+ Course: PROG1700 (Section: 706)
+ Author: Soohak KIM (w0409248)
+ Final Project: Javascipt Client Side programming
+ Title: Countries of The World
+ Date: 2017-12-xx
+ Filename: countries_world.html
+-->
+    <meta charset="UTF-8">
+    <title>Countries of The World</title>
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+<body onload="OpenJason()">
+  <section id="country">
+    <p>Choose a country from the list:
+      <select type="text" name="country_name" id="country_select"/>
+      <option value=""></option>
+      </select></p>
+  </section>
+
+  <section id="information">
+
+      <h4>Country Info:</h4>
+      <article id="flag">
+          <h3></h3>
+          <img id="flag_name" src="flags/countries.png" alt="Countries of The World" />
+      </article>
+
+      <h4>Population:</h4>
+      <article id="population">
+          <textarea name="population" id="pop_country" rows="1" cols="40"></textarea>
+      </article>
+
+      <h4>Area In:</h4>
+      <article id="area">
+          <select type="text" id="area_block" />,
+          <option value="1">Sq.Miles</option>
+          <option value="2">Sq.kilometres</option>
+              </select><br>
+          <textarea id="Mile_Kilo" rows="1" cols="40"></textarea>
+      </article><br>
+
+      <h4>Population Density:</h4>
+      <article id="density">
+          <fieldset>
+              <input type="radio" id="mile" value="1" >&nbsp;Per Square Mile<br>
+              <input type="radio" id="killo" value="2" >&nbsp;Per Square KM<br>
+              <textarea id="pop_density" rows="1" cols="40"></textarea>
+          </fieldset>
+      </article>
+
+      <h4>Percentage of World Population:</h4>
+      <article id="percentage">
+          <textarea id="world_pop" rows="1" cols="40"></textarea>
+      </article>
+      <button id="wiki" name="wiki_country" type="button">Wiki Conuntry</button>
+  </section>
+
+
+<script src="script/script_countries.js"></script>
+
+</body>
+
+</html>

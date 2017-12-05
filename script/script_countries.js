@@ -12,7 +12,6 @@
 // var request = new XMLHttpRequest();
 // request.open("get", "script/countries.json", true);
 var array = [];
-var xmlhttp = new XMLHttpRequest();
 var country_name = "";
 var area = 0.0;
 var population = 0;
@@ -22,20 +21,20 @@ var Population_Density = 0.0;
 
 
 // *** Function Part ***
-// Function: Open the json file and load data
+// Function1: Open the JSON file and load data when this page open
 function OpenJason() {
-    xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             array = JSON.parse(this.responseText);
             GetSelectValue();
         }
-    };
-    xmlhttp.open("GET", "script/countries.json", true);
-    xmlhttp.send();
+    }
+    request.open("GET", "../script/countries.json", true);
+    request.send();
 }
 
-// Function: Display country list in select
+// Function2: Display country list in select drop down box
 function GetSelectValue()
 {
     var option_value = "<option>Select Country</option>";
@@ -46,7 +45,7 @@ function GetSelectValue()
     document.getElementById('country_select').innerHTML = option_value;
 }
 
-// Function: Display number with comma
+// Function3: Change the number with comma in Population textarea
 function Display_num(displaynumber)
 {
     //JavaScript Regular Expression: I refer from the Internet
@@ -54,15 +53,14 @@ function Display_num(displaynumber)
 }
 
 
-// Function: Change Flag
+// Function4: Change Flag image from 'flag' file folder
 function ChangeFlag(country)
 {
-    var target_element = document.getElementById('flag');
     var change_value = "";
     var flag_name = "";
-    var under_bar = "_"
+    var under_bar = "_";
 
-    // change file name with "_"
+    // Change country name to file_name with "_"
     for(var u=0; u<country.length; u++)
     {
         if(country[u] ==" ")
@@ -76,13 +74,14 @@ function ChangeFlag(country)
     }
 
     change_value +=`<h3>${country}</h3>\n`;
-    change_value +=`<img src="flags/${flag_name}.png" alt=\"Countries of The World\" />\n`;
-    target_element.innerHTML = change_value;
+    change_value +=`<img src="../flags/${flag_name}.png" alt=\"Countries of The World\" />\n`;
+    document.getElementById('flag').innerHTML = change_value;
 }
 
-// Function: Display country information in each element
+// Function5: Display country information in each element (main function)
 function DisplayCountryData()
 {
+    //Reset variable data for user select other country again after first choice
     area = 0.0;
     population = 0;
     world_population = 0.0;
@@ -94,19 +93,21 @@ function DisplayCountryData()
     var first_select = document.getElementById("country_select");
     var selected_index = first_select.options[first_select.selectedIndex].value;
 
-    // Sum of the population all countries
-    for (var i = 0; i < array.length; i++) {
-        world_population += parseInt(array[i].Population);
-    }
-
-    //Input value to variables from 'array = JSON.parse(this.responseText);'
+    //Input the value to variables from 'array = JSON.parse(this.responseText);' with matched data by index number of select
     country_name = array[selected_index].Name;
     population = parseFloat(array[selected_index].Population);
     area = parseFloat(array[selected_index].Area);
     var numeric = Display_num(population); // change number with "," per three digit
 
-    Population_Density = population/area; // Calculate Population Density
-    rate_per_worl = (population/world_population)*100; // Calculate Percentage of World Population:
+    // Sum of the population all countries
+    for (var i = 0; i < array.length; i++) {
+        world_population += parseInt(array[i].Population);
+    }
+    // Calculate Population Density
+    Population_Density = population/area;
+
+    // Calculate Percentage of World Population:
+    rate_per_worl = (population/world_population)*100;
 
     //document.getElementById('pop_country').value = population;
     document.getElementById('pop_country').value = numeric;
@@ -115,54 +116,73 @@ function DisplayCountryData()
     document.getElementById('world_pop').value = `${rate_per_worl.toFixed(3)}`+`%`;
     ChangeFlag(country_name);
 
-    document.getElementById("area_block").value = 1; //Default set is Miles
-    document.getElementById('mile').checked = true;  //Default set is per square mile
+    //Default set is Miles
+    document.getElementById("area_block").value = 1;
+
+    //Default set is per square mile
+    document.getElementById('mile').checked = true;
+    document.getElementById('kilo').checked = false;
+
+    //button able
+    document.getElementById('wiki').disabled = false;
 }
 
-// Function: Display Area in Sq.Miles or Sq.kilometres
+// Function6: Display Area in Sq.Miles or Sq.kilometres by the second select element
 function CalculateKilloMile() {
     var sq_miles = 0.0;
     var sp_kilometres = 0.0;
+
+    //Get index number from current sq.Miles data in select box
+    // This index number is same the oder number of array
     var second_select = document.getElementById("area_block");
     var selected_index = second_select.options[second_select.selectedIndex].value;
-    // 1 mile = 1.609347 km
-    //Therefore, 1 Sq.Miles = 1.609347*1.609347 = 2.589997766409, around 2.6 Sq.kilometres
+
+    // Calculate for change to sq.KM
+    // 1 mile = 1.609347 km. Therefore, 1 Sq.Miles = 1.609347*1.609347 = 2.589997766409, around 2.6 Sq.kilometres
     sq_miles = area.toFixed(1);
     sp_kilometres = sq_miles * 2.6;
 
-    if(selected_index == 2)
+    if(selected_index == 2) // Select Sq.KM
     {
         document.getElementById('Mile_Kilo').value = sp_kilometres.toFixed(1);
     }
-    else
+    else // Select Sq.Miles
     {
         document.getElementById('Mile_Kilo').value = area.toFixed(1);
     }
 }
 
-// Function: Connect to WikiPedia website for country
+
+
+// Function7: selected 'Per Square KM' radio button
+function ChangeSqKm() {
+
+     document.getElementById('mile').checked = false;
+     document.getElementById('kilo').checked = true;
+
+     var sp_kilometres = 0.0;
+     var Density = 0.0
+     sp_kilometres = area * 2.6;
+     Density = population/sp_kilometres;
+
+     document.getElementById('pop_density').value = Density.toFixed(2);
+ }
+
+ // Function8: selected 'Per Square Miles' radio button
+function ChangeSqMile() {
+
+    document.getElementById('mile').checked = true;
+    document.getElementById('kilo').checked = false;
+
+    document.getElementById('pop_density').value = Population_Density.toFixed(2);
+}
+
+// Function9: Connect to WikiPedia website for country
 function ConnectWiki()
 {
     var url = `http://en.wikipedia.org/wiki/${country_name}`;
     window.open(url,"_blank");
 }
-
-// Function: selected 'Per Square KM' radio button
-// function ChangeSqKm() {
-//     document.getElementById('mile').checked = false;
-//     document.getElementById('kilo').checked = true;
-
-    // var sq_miles = 0.0;
-    // var sp_kilometres = 0.0;
-    // var Density = 0.0
-    // var num_people = parseFloat(array[selected_index].Population);
-    // sq_miles =  parseFloat(array[selected_index].Area);
-    // sp_kilometres =sq_miles * 2.6;
-    // Density = num_people/sp_kilometres;
-    //
-    //  document.getElementById('pop_density').value = Density.toFixed(2);
- // }
-
 
 
 // Event listener1: Select country in the select box
@@ -175,7 +195,7 @@ document.getElementById('area_block').addEventListener("change", CalculateKilloM
 document.getElementById('wiki').addEventListener("click", ConnectWiki);
 
 // Event listener4: selected 'Per Square KM' radio button in Population Density
-document.getElementById('kilo').addEventListener("change", ChangeSqKm);
+document.getElementById('kilo').addEventListener("click", ChangeSqKm);
 
 // Event listener5: selected 'Per Square Mile' radio button in Population Density
-//document.getElementById('mile').addEventListener("checked", ChangeSqMile);
+document.getElementById('mile').addEventListener("click", ChangeSqMile);

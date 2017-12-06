@@ -139,7 +139,7 @@ article#introduce {
     padding: 10px;
 }
 
-article#introduce h1 {
+section#main h1 {
     color: rgb(208, 104, 15);
     font-size: 1.9em;
     letter-spacing: 0.2em;
@@ -162,6 +162,15 @@ section#short_path article {
 section#short_path > h1 {
     color: rgb(208, 104, 15);
     font-size: 2em;
+    letter-spacing: 0.2em;
+    line-height: 1em;
+    width: 100%;
+    padding-left: 12px;
+}
+section#short_path > h2 {
+    font-family: "Gothic";
+    color: rgb(208, 104, 15);
+    font-size: 1em;
     letter-spacing: 0.2em;
     line-height: 1em;
     width: 100%;

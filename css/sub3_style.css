@@ -4,7 +4,7 @@
  Final Project: NSCC WEBD1000, 2017-Fall
  Author: Soohak KIM
  Date: 2017-12-8
- Filename: sub2_style.css (style for Portfolio.html)
+ Filename: sub3_style.css (style for self_directed_study.html)
 */
 
 
@@ -14,7 +14,7 @@ body {
     font-size: 15px;
 }
 
-img#sub2_center {
+img#sub3_center {
     display: block;
     float: left;
     width: 100%;
@@ -28,10 +28,6 @@ a.nav-list:link, a.nav-list:visited {
     color: white;
 }
 
-a#project1:link, a#project1:visited {
-    color: rgb(167, 21, 30);
-}
-
 li {
     font-size: 0.8em;
     line-height: 2;
@@ -42,17 +38,17 @@ h1 {
     color: rgb(167, 21, 30);
 }
 h2 {
-    font-size: 1em;
+    font-size: 1.1em;
     color: rgb(54, 66, 119);
 }
 
 h3 {
-    font-size: 1em;
+    font-size: 1.1em;
     color: rgb(54, 66, 119);
 }
 
 h4 {
-    font-size: 0.9em;
+    font-size: 1em;
     color: rgb(103, 65, 57);
 }
 p {
@@ -143,10 +139,66 @@ img#country {
     display: none;
 }
 
+/* Table Styles */
+table.PersonaltPlan {
+    border-collapse: collapse;
+    border: 2px solid gray;
+    font-size: 0.8em;
+    width: 100%;
+}
+table.PersonaltPlan th {
+    font-size: 0.8em;
+    border: 2px solid gray;
+    vertical-align: middle;
+    width: 30px;
+    padding: 10px;
+}
+table.PersonaltPlan td {
+    border: 1px solid gray;
+    vertical-align: middle;
+    text-align: center;
+    height: 20px;
+}
+table.PersonaltPlan tfoot {
+    background: rgb(39, 49, 87);
+    color:white;
+    font-size: 0.8em;
+}
+table.PersonaltPlan thead {
+    background: rgb(57, 95, 151);
+    color:white;
+    height: 20px;
+}
+table.PersonaltPlan tbody {
+    background: rgb(168, 191, 114);
+    font-size: 0.8em;
+    color: rgb(167, 21, 30);
+    width: 30px;
+    text-align: center;
+}
+
 /* Tablet and Desktop Styles: 481px and greater */
 
 @media only screen and (min-width: 481px)
 {
+    #container {
+        width: 995px;
+        margin: 0 auto;
+        border: 1px solid grey;
+        background: rgb(248, 244, 251);
+    }
+
+    img#country {
+        display: block;
+        float: left;
+        width: 70%;
+        margin-top: 10px;
+    }
+
+    header {
+        height: 500px;
+    }
+
     li {
         font-size: 1.2em;
         line-height: 2;
@@ -170,31 +222,13 @@ img#country {
         font-size: 1em;
         color: rgb(103, 65, 57);
     }
+
     p {
-        font-size: 1.3em;
+        font-size: 1em;
         line-height: 2.5;
         color: rgb(87, 101, 153);
     }
-
-    #container {
-        width: 995px;
-        margin: 0 auto;
-        border: 1px solid grey;
-        background: rgb(248, 244, 251);
-    }
-
-    img#country {
-        display: block;
-        float: left;
-        width: 70%;
-        margin-top: 10px;
-    }
-
-    header {
-        height: 500px;
-    }
-
-    #nscc {
+    #short_term {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -205,7 +239,7 @@ img#country {
         padding: 15px 2% 10px 5%;
     }
 
-    #Mini_Project{
+    #long_term{
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -222,29 +256,60 @@ img#country {
         padding: 20px;
     }
 
-    #text_nscc {
+    #text_short {
         float: left;
         width: 100%;
         margin-bottom: 5%;
     }
 
-    #text_mini{
+    #text_long{
         float: left;
         width: 100%;
         margin-bottom: 5%;
     }
 
-    #nscc .photo, #Mini_Project .photo {
-        float: left;
-        margin-right: 5%;
-        margin-left: 5%;
-    }
-
-    #nscc text, #Mini_Project .text {
+    #short_term text, #long_term .text {
         float: left;
     }
 
     footer {
         clear: both;
+    }
+
+    /* Table Styles */
+    table.PersonaltPlan {
+        border-collapse: collapse;
+        border: 2px solid gray;
+        font-size: 1em;
+        width: 100%;
+    }
+    table.PersonaltPlan th {
+        border: 2px solid gray;
+        vertical-align: middle;
+        width: 30px;
+        padding: 10px;
+    }
+    table.PersonaltPlan td {
+        border: 1px solid gray;
+        vertical-align: middle;
+        text-align: center;
+        height: 40px;
+    }
+    table.PersonaltPlan tfoot {
+        background: rgb(39, 49, 87);
+        color:white;
+        font-size: 1em;
+    }
+    table.PersonaltPlan thead {
+        background: rgb(57, 95, 151);
+        color:white;
+        height: 30px;
+    }
+    table.PersonaltPlan tbody {
+        background: rgb(168, 191, 114);
+        font-size: 1em;
+        color: rgb(167, 21, 30);
+        width: 70px;
+        text-align: center;
     }
 }

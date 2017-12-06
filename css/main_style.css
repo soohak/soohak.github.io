@@ -140,7 +140,7 @@ article#introduce {
 }
 
 article#introduce h1 {
-    color: rgb(230, 111, 15);
+    color: rgb(208, 104, 15);
     font-size: 1.9em;
     letter-spacing: 0.2em;
     line-height: 1em;
@@ -160,7 +160,7 @@ section#short_path article {
 }
 
 section#short_path > h1 {
-    color: rgb(230, 111, 15);
+    color: rgb(208, 104, 15);
     font-size: 2em;
     letter-spacing: 0.2em;
     line-height: 1em;

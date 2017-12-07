@@ -148,7 +148,8 @@ section#main h1 {
     font-size: 1.9em;
     letter-spacing: 0.2em;
     line-height: 1em;
-    margin: 10px 0px 20px 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
     padding-left: 12px;
 }
 
@@ -175,8 +176,8 @@ section#short_path > h1 {
     width: 100%;
     padding-left: 12px;
 }
+
 section#short_path > h2 {
-    font-family: "Gothic";
     color: rgb(208, 104, 15);
     font-size: 1em;
     letter-spacing: 0.2em;
@@ -257,17 +258,11 @@ a#navicon {
 }
 
 
-/* Mobile Styles: 0 to 480px */
+/* Mobile Styles: 0 to 532px */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 532px) {
     aside {
-        -webkit-order: 4;
-        order: 4;
-    }
-
-    footer {
-        -webkit-order: 5;
-        order: 5;
+        display: none;
     }
 
     a#navicon {
@@ -283,10 +278,36 @@ a#navicon {
     }
 
     section#short_path article {
-        -webkit-flex: 1 1 200px;
-        flex-flow: 1 1 200px;
+        -webkit-flex: 1 1 100px;
+        flex-flow: 1 1 100px;
     }
 
+    section#main h1 {
+        color: rgb(208, 104, 15);
+        font-size: 1.2em;
+        letter-spacing: 0.2em;
+        line-height: 1em;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding-left: 12px;
+    }
+
+    section#short_path > h1 {
+        color: rgb(208, 104, 15);
+        font-size: 1.2em;
+        letter-spacing: 0.2em;
+        line-height: 1em;
+        width: 100%;
+        padding-left: 12px;
+    }
+
+    article#introduce p {
+        font-size: 1em;
+        margin-bottom: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+
+    }
     img.ShortMenu {
         display: block;
         width: 90%;
@@ -295,9 +316,41 @@ a#navicon {
     }
 }
 
-/* Tablet and Desktop Styles: 481px and greater */
+/* Tablet and Desktop Styles: 532px and 611 */
 
-@media only screen and (min-width: 481px) {
+@media only screen and (max-width: 611px) {
+    a#navicon {
+        display: block;
+    }
+
+    nav.nav_link ul{
+        display: none;
+    }
+
+    a#navicon:hover+ul, nav.nav_link ul:hover {
+        display: block;
+    }
+
+    section#short_path article {
+        -webkit-flex: 1 1 120px;
+        flex-flow: 1 1 120px;
+    }
+
+    section#short_path article p{
+        display: none;
+    }
+
+    img.ShortMenu {
+        display: block;
+        width: 100%;
+        height: 80%;
+        margin: 5px auto;
+    }
+}
+
+/* Tablet and Desktop Styles: 612px and greater */
+
+@media only screen and (min-width: 612px) {
 
     nav.nav_link ul {
         display: -webkit-flex;

@@ -146,9 +146,11 @@ img#my_image, img#skills, img#ohs, img#whmis {
         border: 1px solid grey;
         background: rgb(248, 244, 251);
     }
+
     header {
         height: 500px;
     }
+
     img#my_image {
         display: block;
         float: left;
@@ -156,7 +158,7 @@ img#my_image, img#skills, img#ohs, img#whmis {
         margin-right: 20px;
     }
 
-    img#project {
+    img#skills {
         display: block;
         float: left;
         width: 37%;
@@ -171,6 +173,7 @@ img#my_image, img#skills, img#ohs, img#whmis {
         margin-bottom: 20px;
         margin-right: 80px;
     }
+
     img#mini_ohs, img#mini_whmis {
         display: none;
     }
@@ -215,7 +218,7 @@ img#my_image, img#skills, img#ohs, img#whmis {
         padding: 15px 2% 10px 5%;
     }
 
-    #education{
+    #education {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -236,6 +239,7 @@ img#my_image, img#skills, img#ohs, img#whmis {
         height: 600px;
         padding: 15px 2% 10px 5%;
     }
+
     #certification{
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;

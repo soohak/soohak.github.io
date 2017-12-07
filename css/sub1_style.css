@@ -132,7 +132,7 @@ footer p {
     text-align: center;
 }
 
-img#my_image, img#project, img#ohs, img#whmis {
+img#my_image, img#skills, img#ohs, img#whmis {
     display: none;
 }
 
@@ -226,7 +226,7 @@ img#my_image, img#project, img#ohs, img#whmis {
         padding: 15px 2% 10px 5%;
     }
 
-    #current_skils {
+    #current_skills {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
@@ -278,7 +278,7 @@ img#my_image, img#project, img#ohs, img#whmis {
         float: left;
     }
 
-    #current_skils .text {
+    #current_skills .text {
         float: left;
     }
 

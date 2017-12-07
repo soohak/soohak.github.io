@@ -149,7 +149,11 @@ section#main h1 {
 }
 
 article#introduce p {
-    margin: 12px;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+
 }
 
 

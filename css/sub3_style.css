@@ -140,40 +140,39 @@ img#country {
 }
 
 /* Table Styles */
-table.PersonaltPlan {
+table.PersonalPlan {
     border-collapse: collapse;
     border: 2px solid gray;
     font-size: 0.8em;
     width: 100%;
 }
-table.PersonaltPlan th {
-    font-size: 0.8em;
+table.PersonalPlan th {
     border: 2px solid gray;
     vertical-align: middle;
-    width: 30px;
-    padding: 10px;
+    width: 25px;
+    padding: 5px;
 }
-table.PersonaltPlan td {
+table.PersonalPlan td {
     border: 1px solid gray;
     vertical-align: middle;
     text-align: center;
-    height: 20px;
 }
-table.PersonaltPlan tfoot {
+table.PersonalPlan tfoot {
     background: rgb(39, 49, 87);
-    color:white;
     font-size: 0.8em;
-}
-table.PersonaltPlan thead {
-    background: rgb(57, 95, 151);
     color:white;
-    height: 20px;
 }
-table.PersonaltPlan tbody {
+table.PersonalPlan thead {
+    background: rgb(57, 95, 151);
+    font-size: 0.8em;
+    color:white;
+    height: 25px;
+}
+table.PersonalPlan tbody {
     background: rgb(168, 191, 114);
     font-size: 0.8em;
     color: rgb(167, 21, 30);
-    width: 30px;
+    width: 25px;
     text-align: center;
 }
 
@@ -278,35 +277,35 @@ table.PersonaltPlan tbody {
     }
 
     /* Table Styles */
-    table.PersonaltPlan {
+    table.PersonalPlan {
         border-collapse: collapse;
         border: 2px solid gray;
         font-size: 1em;
         width: 100%;
     }
-    table.PersonaltPlan th {
+    table.PersonalPlan th {
         border: 2px solid gray;
         vertical-align: middle;
         width: 30px;
         padding: 10px;
     }
-    table.PersonaltPlan td {
+    table.PersonalPlan td {
         border: 1px solid gray;
         vertical-align: middle;
         text-align: center;
         height: 40px;
     }
-    table.PersonaltPlan tfoot {
+    table.PersonalPlan tfoot {
         background: rgb(39, 49, 87);
         color:white;
         font-size: 1em;
     }
-    table.PersonaltPlan thead {
+    table.PersonalPlan thead {
         background: rgb(57, 95, 151);
         color:white;
         height: 30px;
     }
-    table.PersonaltPlan tbody {
+    table.PersonalPlan tbody {
         background: rgb(168, 191, 114);
         font-size: 1em;
         color: rgb(167, 21, 30);

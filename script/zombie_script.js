@@ -13,7 +13,7 @@ let timerId =0; //Time
 let showTime =0;
 let soundEffect =0;
 let gameScore =0;
-let shesgone =600; //Time set for disappearance of zombie
+let shesgone =650; //Time set for disappearance of zombie
 
 let img_array = ["zombie0.png", "zombie1.png"];
 let random_row=0; // row position of zombie(for random)

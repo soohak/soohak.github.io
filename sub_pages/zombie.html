@@ -1,0 +1,68 @@
+<!-- 
+ Created by w0409248 on 1/10/2018.
+ Course: PROG 2700 Client-side Javascript
+ Assignment 1
+ Name: Soohak KIM
+ ID: w0409248
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zap-A-Zombi: Hell Gate</title>
+    <link href="../css/zombie.css" rel="stylesheet" />
+    <script src="../script/zombie_script.js"></script>
+</head>
+
+ <body>
+    <header>
+        <!-- Royalty free image : https://www.pixaby.com -->
+        <img id="header_img" src="../img/hell.jpg" alt="Zap-A-Zombi" />
+        <audio id="BGM" ></audio>
+    </header>
+
+    <section id="menu">
+        <fieldset id="game_set">
+        <h4>Please submit the number for game size!</h4>
+        <h4 id="notice"></h4>
+        <Label>Rows</Label>
+        <input type="number" id="rows" value=3 disabled />
+        <Label>Cols</Label>
+        <input type="number" id="cols" value=3 disabled /><br>
+        <button id="game_setting" type="button">Game Setting</button>
+        <button id="start" type="button" disabled>Game Start</button>
+		<button id="reset" type="button" disabled>Game Re-set</button>
+        </fieldset>
+
+        <fieldset id="time_score">
+            <p id="timer"><b>Time:</b></p>
+            <p id="score"><b>Score:</b></p>
+        </fieldset>
+        <fieldset id="image">
+            <img src="../img/zombies/zombie_back1.png">
+            <img src="../img/zombies/zombie_back2.png">
+            <h2>The door of Hell will soon be opened.....</h2>
+        </fieldset>
+
+    </section>
+
+    <main id="main_board">
+        <table id="game_board" >
+            <tr>
+            </tr>
+        </table>
+        <audio id="zombieSound" ></audio>
+        <audio id="gunSound" ></audio>
+    </main>
+
+    <footer>
+        <address>
+            Name: Soohak KIM
+            Student ID: W0409248
+            PROG2700: Assignment 1 - "Zap-A-Zombi Game"
+        </address>
+    </footer>
+
+ </body>
+</html>

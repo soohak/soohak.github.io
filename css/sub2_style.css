@@ -31,7 +31,9 @@ a.nav-list:link, a.nav-list:visited {
 a#project1:link, a#project1:visited {
     color: rgb(167, 21, 30);
 }
-
+a#project2:link, a#project2:visited {
+    color: rgb(167, 21, 30);
+}
 li {
     font-size: 0.8em;
     line-height: 2;

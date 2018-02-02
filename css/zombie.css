@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    position:relative;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-flow: row wrap;
+    margin:0;
+    padding:0;
+}
+
+body > * {
+    padding: 1em;
+    display: flex;
+    flex: 1 100%;
+}
+
+header {
+    width: 100%;
+    background-color: darkred;
+    min-height: 500px;
+    margin:0;
+    padding:0;
+}
+
+#header_img {
+    width: 100%;
+    margin:0;
+}
+
+#menu {
+    background-color: black;
+    display: block;
+    float:left;
+    margin: 0;
+}
+
+
+input {
+    display:block;
+    width: 215px;
+    margin-left: 10px;
+    color: darkred;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+h4{
+    color: darkorange;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+label {
+    display: block;
+    margin-left: 10px;
+    color: darkorange;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+button {
+    width: 70px;
+    height: 50px;
+    margin-left: 10px;
+    background-color: darkred;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+fieldset{
+    border-color: darkorange;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    margin-left: 20px;
+    color: red;
+}
+
+fieldset#game_set{
+    display: block;
+    float:left;
+    width: 400px;
+    height: 270px;
+}
+
+fieldset#time_score{
+    display: block;
+    float:left;
+    width: 400px;
+    height: 90px;
+}
+
+fieldset#image{
+    display: block;
+    float: left;
+    border-color: black;
+    text-align: center;
+}
+
+#time_score > p{
+    color: darkorange;
+    font-weight: bold;
+}
+
+#main_board {
+    display: block;
+    float:left;
+    background: url("../img/background.jpg")center no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+    min-height: 700px;
+}
+
+
+#game_board {
+    border-collapse: collapse;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+td {
+    color: white;
+    background: url("../img/portals/portal0.png")center no-repeat;
+    background-size: cover;
+    width: 110px;
+    height: 110px;
+    border: 3px outset darkred;
+    padding: 3px;
+    text-align:center;
+}
+
+footer {
+    width: 100%;
+    float: left;
+    background-color: darkblue;
+    color: yellow;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+address{
+    text-decoration:none;
+    white-space: pre;
+}

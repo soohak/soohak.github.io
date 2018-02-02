@@ -201,19 +201,19 @@ function BGM(){
         
 function zombieSound(){
     //Zombie Sound effect, free effect sound from "SoundEffect++" : https://www.soundeffectsplus.com
-    let zombie_sound = `<embed src="../sound/monster-growl.mp3" autoplay ></embed>`;
+    let zombie_sound = `<audio src="../sound/monster-growl.mp3" autoplay ></audio>`;
     document.getElementById('zombieSound').innerHTML = zombie_sound;
 }
 
 function gunCokingSound(){
     //Cocking Sound effect, free effect sound from "SoundEffect++" : https://www.soundeffectsplus.com
-    let cocking_sound = `<embed src="../sound/gun-cocking.mp3" autoplay  ></embed>`;
+    let cocking_sound = `<audio src="../sound/gun-cocking.mp3" autoplay  ></audio>`;
     document.getElementById('gunSound').innerHTML = cocking_sound;
 }
 
 function gunShotSound(){
     //Shooting Sound effect, free effect sound from "SoundEffect++" : https://www.soundeffectsplus.com
-    let shooting_sound = `<embed src="../sound/gunshot-single.mp3" autoplay  ></embed>`;
+    let shooting_sound = `<audio src="../sound/gunshot-single.mp3" autoplay  ></audio>`;
     document.getElementById('gunSound').innerHTML = shooting_sound;
 }
 

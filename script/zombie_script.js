@@ -28,8 +28,8 @@ let table =""; //For table DOM
 
 function initialize(){//Screen and Game initialization
     //Exception Handling for input
-    document.getElementById('rows').disabled = false;
-    document.getElementById('cols').disabled = false;
+    document.querySelector('#rows').disabled = false;
+    document.querySelector('#cols').disabled = false;
 
     //Button Activation
     document.querySelector('#game_setting').addEventListener('click', gameSetter);
@@ -40,8 +40,8 @@ function initialize(){//Screen and Game initialization
 function gameSetter() //Game Preparation
 {
     //Get input number for game board size
-    row = parseInt(document.getElementById('rows').value);
-    col = parseInt(document.getElementById('cols').value);
+    row = parseInt(document.getElementById('#rows').value);
+    col = parseInt(document.getElementById('#cols').value);
 
     //Reset score
     gameScore = 0;
@@ -52,18 +52,18 @@ function gameSetter() //Game Preparation
 	  drawTable(row,col);
 
 	  //Exception Handling for button
-      document.getElementById('game_setting').disabled = true;
-      document.getElementById('reset').disabled = false;
-      document.getElementById('start').disabled = false;
-      document.getElementById('rows').disabled = true;
-      document.getElementById('cols').disabled = true;
+      document.querySelector('#game_setting').disabled = true;
+      document.querySelector('#reset').disabled = false;
+      document.querySelector('#start').disabled = false;
+      document.querySelector('#rows').disabled = true;
+      document.querySelector('#cols').disabled = true;
 
       //Time & Score board reset
       let timeReset = `<p><b>Timer:</b> Play Time is ${countDown} seconds </p>`;
-      document.getElementById('timer').innerHTML = timeReset;
+      document.querySelector('#timer').innerHTML = timeReset;
       let scoreReset = `<p><b>Score:</b> 0</p>`;
-      document.getElementById('score').innerHTML = scoreReset;
-      document.getElementById('notice').innerHTML = "";
+      document.querySelector('#score').innerHTML = scoreReset;
+      document.querySelector('#notice').innerHTML = "";
       //effect sound
       gunCokingSound();
 	  BGM();
@@ -71,14 +71,14 @@ function gameSetter() //Game Preparation
     else
     {
       let alret = `<h4><u><b>!!!!!! Please Enter the number between 3 and 7 !!!!!!</b></u></h4>`;
-      document.getElementById('notice').innerHTML = alret;
+      document.querySelector('#notice').innerHTML = alret;
       initialize();
     }
 }//End gameSetter
 
 function drawTable(row, cols){//Create game board (making table)
 
-    table = document.querySelector('table');
+    table = document.querySelector('#table');
     table.innerHTML = "";
 
     for(let r=0; r<row; r++)
@@ -104,8 +104,8 @@ function startGame(){//Start Game
     soundEffect = setInterval(zombieSound,2000);
 
     //Exception Handling for button
-    document.getElementById('start').disabled = true;
-    document.getElementById('reset').disabled = true;
+    document.querySelector('#start').disabled = true;
+    document.querySelector('#reset').disabled = true;
 }
 
 function timer(){//Timer
@@ -113,14 +113,14 @@ function timer(){//Timer
     {
         clearInterval(timerId);
         let time_over = `<p><b>Timer:</b> Game Over!!!</p>`;
-        document.getElementById('timer').innerHTML = time_over;
+        document.querySelector('#timer').innerHTML = time_over;
         countDown = 30; //reset
         gameOver();
     }
     else
 	{
         let time_counter = `<p><b>Timer:</b>  ${countDown}</p>`;
-        document.getElementById('timer').innerHTML = time_counter;
+        document.querySelector('#timer').innerHTML = time_counter;
         countDown = countDown-1;
 	}
 }
@@ -162,7 +162,7 @@ function shootZombie() {//Shooting
 
     //Show score
     let total_score = `<p><b>Score:</b> ${gameScore} points!!!</p>`;
-    document.getElementById('score').innerHTML = total_score;
+    document.querySelector('#score').innerHTML = total_score;
 }//End shootZombie
 
 
@@ -176,9 +176,9 @@ function gameOver(){//Game end
     // document.getElementById('score').innerHTML = total_score;
 
     //Exception Handling
-    document.getElementById('rows').disabled = false;
-    document.getElementById('cols').disabled = false;
-    document.getElementById('game_setting').disabled = false;
+    document.querySelector('#rows').disabled = false;
+    document.querySelector('#cols').disabled = false;
+    document.querySelector('#game_setting').disabled = false;
 
     //Reset varialbes
     row =0;
@@ -196,25 +196,25 @@ function resetGame(){//Game reset for reset_button
 function BGM(){
     //Background Music, Wikipedia Free sound : https://https://en.wikipedia.org/wiki/Requiem_(Mozart)
     let background_music = `<audio src="https://soohak.github.io/sound/Mozart_Requiem_II.mp3" autoplay loop></audio>`;
-    document.getElementById('BGM').innerHTML = background_music;
+    document.querySelector('#BGM').innerHTML = background_music;
 }
         
 function zombieSound(){
     //Zombie Sound effect, free effect sound from "SoundEffect++" : https://www.soundeffectsplus.com
     let zombie_sound = `<audio src="https://soohak.github.io/sound/monster-growl.mp3" autoplay ></audio>`;
-    document.getElementById('zombieSound').innerHTML = zombie_sound;
+    document.querySelector('#zombieSound').innerHTML = zombie_sound;
 }
 
 function gunCokingSound(){
     //Cocking Sound effect, free effect sound from "SoundEffect++" : https://www.soundeffectsplus.com
     let cocking_sound = `<audio src="https://soohak.github.io/sound/gun-cocking.mp3" autoplay  ></audio>`;
-    document.getElementById('gunSound').innerHTML = cocking_sound;
+    document.querySelector('#gunSound').innerHTML = cocking_sound;
 }
 
 function gunShotSound(){
     //Shooting Sound effect, free effect sound from "SoundEffect++" : https://www.soundeffectsplus.com
     let shooting_sound = `<audio src="https://soohak.github.io/sound/gunshot-single.mp3" autoplay  ></audio>`;
-    document.getElementById('gunSound').innerHTML = shooting_sound;
+    document.querySelector('#gunSound').innerHTML = shooting_sound;
 }
 
 

@@ -25,7 +25,7 @@ a {
     text-decoration: none;
 }
 
-a.nav_list:link, a.nav_list:visited {
+a.nav-list:link, a.nav-list:visited {
     color: white;
 }
 li {

@@ -52,7 +52,7 @@ body {
 
     #container {
         max-width: 480px;
-        height: 800px;
+        height: 700px;
         margin: 0 auto;
         background:url(../img/mobile.jpg);
         background-repeat: no-repeat;

@@ -22,6 +22,7 @@ img#sub3_center {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 a.nav-list:link, a.nav-list:visited {

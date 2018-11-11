@@ -195,25 +195,25 @@ function resetGame(){//Game reset for reset_button
 
 function BGM(){
     //Background Music, Wikipedia Free sound : https://https://en.wikipedia.org/wiki/Requiem_(Mozart)
-    let background_music = `<audio src="https://soohak.github.io/sound/Mozart_Requiem_II.mp3" autoplay loop></audio>`;
+    let background_music = `<audio src="../sound/Mozart_Requiem_II.mp3" autoplay loop></audio>`;
     document.querySelector('#BGM').innerHTML = background_music;
 }
         
 function zombieSound(){
     //Zombie Sound effect, free effect sound from "SoundEffect++" : https://www.soundeffectsplus.com
-    let zombie_sound = `<audio src="https://soohak.github.io/sound/monster-growl.mp3" autoplay ></audio>`;
+    let zombie_sound = `<audio src="../sound/monster-growl.mp3" autoplay ></audio>`;
     document.querySelector('#zombieSound').innerHTML = zombie_sound;
 }
 
 function gunCokingSound(){
     //Cocking Sound effect, free effect sound from "SoundEffect++" : https://www.soundeffectsplus.com
-    let cocking_sound = `<audio src="https://soohak.github.io/sound/gun-cocking.mp3" autoplay  ></audio>`;
+    let cocking_sound = `<audio src="../sound/gun-cocking.mp3" autoplay  ></audio>`;
     document.querySelector('#gunSound').innerHTML = cocking_sound;
 }
 
 function gunShotSound(){
     //Shooting Sound effect, free effect sound from "SoundEffect++" : https://www.soundeffectsplus.com
-    let shooting_sound = `<audio src="https://soohak.github.io/sound/gunshot-single.mp3" autoplay  ></audio>`;
+    let shooting_sound = `<audio src="../sound/gunshot-single.mp3" autoplay  ></audio>`;
     document.querySelector('#gunSound').innerHTML = shooting_sound;
 }
 

@@ -73,6 +73,16 @@ header {
     height: 300px;
     margin: 0;
 }
+
+a#navicon {
+   display: block;
+}
+
+
+a#navicon:hover+ul, nav.nav_link ul:hover {
+   display: block;
+}
+
 nav {
     height: 50px;
     background: black;
@@ -140,6 +150,10 @@ img#my_image, img#skills, img#ohs, img#whmis {
 
 @media only screen and (min-width: 481px)
 {
+    a#navicon {
+        display: none;
+    }
+ 
     #container {
         width: 995px;
         margin: 0 auto;
